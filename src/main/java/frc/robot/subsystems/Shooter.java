@@ -8,8 +8,8 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Shooter extends SubsystemBase {
-    private static final int kTopMotorID = 11;
-    private static final int kBottomMotorID = 21;
+    private static final int kTopMotorID = 21;
+    private static final int kBottomMotorID = 11;
 
     private CANSparkMax topMotor;
     private CANSparkMax bottomMotor;
@@ -29,7 +29,7 @@ public class Shooter extends SubsystemBase {
         bottomMotor.restoreFactoryDefaults();
 
         topMotor.setInverted(false);
-        bottomMotor.setInverted(true);
+        bottomMotor.setInverted(false);
 
         speedChange = 0.01;
 
